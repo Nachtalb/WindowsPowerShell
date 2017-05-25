@@ -1,7 +1,7 @@
 param(
   [ValidateNotNullOrEmpty()]
   [string] $EndPoint = $(throw "Please specify an EndPoint (Host or IP Address)"),
-  [string] $Port = $(throw "Please specify a Port") 
+  [string] $Port = $(throw "Please specify a Port")
 )
 
 $TimeOut = 1000
@@ -11,12 +11,12 @@ $Socket = New-Object System.Net.Sockets.TCPClient
 $Connect = $Socket.BeginConnect($Address,$Port,$null,$null)
 if ( $Connect.IsCompleted )
 {
-  $Wait = $Connect.AsyncWaitHandle.WaitOne($TimeOut,$false)     
-  if(!$Wait) 
+  $Wait = $Connect.AsyncWaitHandle.WaitOne($TimeOut,$false)
+  if(!$Wait)
   {
-    $Socket.Close() 
-    return $false 
-  } 
+    $Socket.Close()
+    return $false
+  }
   else
   {
     $Socket.EndConnect($Connect)

@@ -44,5 +44,5 @@ Banner.ps1
 #}
 
 if (gcm pshazz -ea SilentlyContinue) {
-    pshazz init 'xpando' 
+    pshazz init 'xpando'
 }

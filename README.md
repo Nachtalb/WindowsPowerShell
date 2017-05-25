@@ -5,7 +5,7 @@
 Run a powershell prompt as admin and ensure you can run unsigned scripts
 
 ```Powershell
-Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser 
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
 ```
 
 Install scoop
@@ -18,12 +18,12 @@ Install scoop
 Use scoop to install common utilities
 
 ```PowerShell
-  # if you don't already have git installed 
-  scoop install git    
+  # if you don't already have git installed
+  scoop install git
 
   # pshazz for nice themable prompt, dir colors and more
   # https://github.com/lukesampson/pshazz
-  scoop install pshazz 
+  scoop install pshazz
 
   # install more scoop apps
   scoop install 7zip composer curl ffmpeg file gzip imagemagick less ln nano php rsync ruby sqlite sudo touch unrar unzip vim vimtutor wget which youtube-dl zip
@@ -34,7 +34,7 @@ Configure PowerShell profile. You may want to fork my repo so you can track your
 ``` PowerShell
   # remove existing profile if it exists. WARNING: this will delete your existing profile. Backup your existing profile first if you
   # want to keep any settings that you have already made there
-  if (test-path $env:USERPROFILE\Documents\WindowsPowerShell) { rm -Recurse -Force $env:USERPROFILE\Documents\WindowsPowerShell } 
+  if (test-path $env:USERPROFILE\Documents\WindowsPowerShell) { rm -Recurse -Force $env:USERPROFILE\Documents\WindowsPowerShell }
 
   # Clone into the standard PowerShell profile directory
   cd $env:USERPROFILE\Documents
@@ -63,7 +63,7 @@ Now you can run **_ConEmu.exe_** or **_ConEmu64.exe_** if you are a 64bit OS and
 Customize pshazz theme
 
 ```PowerShell
-  # download my pshazz theme shown in screenshot 
+  # download my pshazz theme shown in screenshot
   $url = 'https://gist.githubusercontent.com/xpando/d42df2c0f014d710db42/raw/cce3f6ca874bd18d316bca946bda34a2bd1efe43/xpando.json'
   if (!(test-path $env:USERPROFILE\pshazz)) { md $env:USERPROFILE\pshazz}
   (new-object net.webclient).downloadstring($url) | out-file $env:USERPROFILE\pshazz\xpando.json

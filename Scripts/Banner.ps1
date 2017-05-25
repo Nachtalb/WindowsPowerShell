@@ -22,8 +22,8 @@ $info = `
 clear
 
 function WriteTo-Pos (
-    [string] $str, 
-    [int] $x = 0, 
+    [string] $str,
+    [int] $x = 0,
     [int] $y = 0,
     [string] $bgc = [console]::BackgroundColor,
     [string] $fgc = [console]::ForegroundColor
@@ -32,7 +32,7 @@ function WriteTo-Pos (
       if($x -ge 0 -and $y -ge 0 -and $x -le [Console]::WindowWidth -and $y -le [Console]::WindowHeight)
       {
             $saveY = [console]::CursorTop
-            $offY = [console]::WindowTop       
+            $offY = [console]::WindowTop
             [console]::setcursorposition($x,$offY+$y)
             Write-Host -Object $str -BackgroundColor $bgc -ForegroundColor $fgc -NoNewline
             [console]::setcursorposition(0,$saveY)

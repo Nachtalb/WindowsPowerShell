@@ -2,7 +2,7 @@ param(
   [Parameter(Mandatory=$true)]
   [SecureString]
   $ApiKey,
-  
+
   [Parameter(Mandatory=$true)]
   [String]
   $EnvironmentName
