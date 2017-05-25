@@ -45,9 +45,9 @@ if ($Host.UI.RawUI.MaxWindowSize.Width -ge 40) {
     $bgc = $Host.UI.RawUI.BackgroundColor
     # TODO: Print a different logo depending on the version of windows
     if ((test-path env:ConEmuANSI) -and ($env:ConEmuANSI -eq "ON")) {
-        cat $psscriptroot\..\logos\flag2.ans
+        cat $psscriptroot\..\logos\win8.ans
     } else {
-        cat $psscriptroot\..\logos\flag2.txt
+        cat $psscriptroot\..\logos\win8.txt
     }
     $Host.UI.RawUI.ForegroundColor = $fgc
     $Host.UI.RawUI.BackgroundColor = $bgc
