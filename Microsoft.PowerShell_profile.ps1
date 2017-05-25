@@ -25,6 +25,14 @@ Set-Alias which Get-Command
 if (test-path "C:\Program Files\Sublime Text 2\sublime_text.exe") { Set-Alias subl "C:\Program Files\Sublime Text 2\sublime_text.exe" }
 if (test-path "C:\Program Files\Sublime Text 3\sublime_text.exe") { Set-Alias subl "C:\Program Files\Sublime Text 3\sublime_text.exe" }
 
+$JetBrains64Path = "C:\Program Files\JetBrains\"
+foreach ($app in $(dir $($JetBrains64Path + 'PhpStorm*') -Name)) {
+    if (test-path $($JetBrains64Path + $app + '\build.txt')) { Set-Alias storm $($JetBrains64Path + $app + '\bin\phpstorm64.exe') }
+}
+foreach ($app in $(dir $($JetBrains64Path + 'PyCharm*') -Name)) {
+    if (test-path $($JetBrains64Path + $app + '\build.txt')) { Set-Alias charm $($JetBrains64Path + $app + '\bin\pycharm64.exe') }
+}
+
 # Remove problematic aliases
 rm alias:curl
 rm alias:wget
