@@ -24,6 +24,9 @@ Use scoop to install common utilities
   # pshazz for nice themable prompt, dir colors and more
   # https://github.com/lukesampson/pshazz
   scoop install pshazz 
+
+  # install more scoop apps
+  scoop install 7zip composer curl ffmpeg file gzip imagemagick less ln nano php rsync ruby sqlite sudo touch unrar unzip vim vimtutor wget which youtube-dl zip
 ```
 
 Configure PowerShell profile. You may want to fork my repo so you can track your own customizations.
@@ -35,7 +38,7 @@ Configure PowerShell profile. You may want to fork my repo so you can track your
 
   # Clone into the standard PowerShell profile directory
   cd $env:USERPROFILE\Documents
-  git clone https://github.com/xpando/WindowsPowerShell.git
+  git clone https://github.com/Nachtalb/WindowsPowerShell.git
 ```
 
 ##### IMPORTANT! Close your current PowerShell window and start a new one as admin so that the new profile settings will take effect
