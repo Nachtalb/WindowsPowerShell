@@ -1,0 +1,1 @@
+ffmpeg -i $args[0] -ss 00:00:01 -vframes 1 -q:v 2 cover.jpg
